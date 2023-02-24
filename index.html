@@ -3,75 +3,73 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="user-scalable=no">
-<title></title>
+<title>Document</title>
 
 </head>
 <body>
-
+    	
 <style>
-body {
+.collapsible {
   background-color: black;
+  color: gold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  
 }
-button {
-	background-color: none;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 15px;
-    margin: none;
-    width: 100%;
-    height: none;
+
+.active, .collapsible:hover {
+  background-color: #28649C;
 }
-img {
-    float: left;
-    border: 1px solid black;
-    border-radius: 100%;
-    opacity: 0.2;
+
+.content {
+  padding: 0 18px;
+  display: block;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border: 1px solid;
+  height: 98%;
+  
 }
-p, a{
-    cursor: none;
-    text-decoration: none;
-	color: black;
-    text-align: none;
-	font-weight: bold;
+.texto_verde {
+	color: #188038;
+}
+
+.texto_roxo {
+	color: #AD67EC;
+}
+
+.texto_azul {
+    color: #3F51B5;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+b, button {
 	font-size: 25px;
-    font-family: "Gill Sans", sans-serif;
- }
+    font-family: "Gill Sans", sans-serif; 
 }
 </style>
+</head>
+
+<body>
+
+
+<button type="button" class="collapsible"><b>APK EDITOR PRO</b></button>
+<div class="content">
+</br>
+  <b></b>
+  <p><a href="#tabela.html"><li>TABELA PARA INTRODUZIR CÓDIGO AO PATCH</li></a></p>
+  
+  <p><a href="#regra.html"><li>AMOSTRAS DE PATCHES</li></a></p>
+  <p><a href="#patches.html"><li>REGRAS</li></a></p>
+    
+</div>
+
 </body>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-
-<button>
-<a href="tabela.html">
-<img src="tabela.png">
-</img><p>TABELA PARA INTRODUZIR CÓDIGO AO PATCH</p>
-</a>
-</button>
-</br>
-</br>
-
-<button>
-<a href="patches.html">
-<img src="patch.png">
-</img><p>AMOSTRAS DE PATCHES</p>
-</a>
-</button>
-</br>
-</br>
-
-<button>
-<a href="regra.html">
-<img src="regr.png">
-</img><p>REGRAS</p>
-</a>
-</button>
-</br>
-</br>
-
 </html>
