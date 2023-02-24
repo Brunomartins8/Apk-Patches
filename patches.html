@@ -1,29 +1,65 @@
 <!DOCTYPE html>
-	
 <html lang="pt" class="translated-ltr">
 <head>
-<meta name="viewport" content="user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<body class="html">
-</head>
-    <!-- meu css -->
-    <link href="" rel="stylesheet">
-    
+<meta name="viewport" content="user-scalable=no">
+<title>Document</title>
 
 </head>
-</body>
+<body>
+    	
 <style>
-body {
-  background-image: url("montanhas-vetor.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .collapsible {
+  background-color: black;
+  color: gold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  
+}
+
+.active, .collapsible:hover {
+  background-color: #28649C;
+}
+
+.content {
+  padding: 0 18px;
+  display: block;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  height: none;
+  border: 1px solid;
+  
+}
+.texto_verde {
+	color: #188038;
+}
+
+.texto_roxo {
+	color: #AD67EC;
+}
+
+.texto_azul {
+    color: #3F51B5;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+b, button {
+	font-size: 25px;
+    font-family: "Gill Sans", sans-serif; 
+}
+.cx {
   font-family: serif;
   font-weight: bold;
   font-size: 30px;
   border-radius: 10px 10px  10px  10px;
-  background-color: none;
+  background-color: white;
   color: none;
   cursor: none;
   padding: 18px;
@@ -32,87 +68,34 @@ body {
   outline: none;
   padding-right: 8px;
 }
-.active, .collapsible:hover {
+.active, .cx:hover {
   background-color: none;
   border-radius: 10px 10px  0px  0px; 
 }
 
-.content {
+.cd {
   border-radius: 0px 0px  10px  10px; 
   padding: 0 18px;
   display: none;
   overflow: hidden;
   font-size: 20px;
   outline: none;
-  background-color: black;
-  border: 2px solid white;
+  background-color: white;
+  border: 2px solid black;
   width: 99%;
   height: 300px;
 }
-.sair {
-  position: absolute;
-  left: 50px;
-  color: #fff;
-  padding: 10px 25px;
-  background-color: black;
-  background-image: radial-gradient(93% 87% at 87% 89%,
-  rgba(0, 0, 0, 0.23) 0%, transparent 86.18%),
-  radial-gradient(66% 66% at 26% 20%,
-  rgba(255, 255, 255, 0.55) 0%,
-  rgba(255, 255, 255, 0) 69.79%,
-  rgba(255, 255, 255, 0) 100%);
-  box-shadow: inset -3px -3px 9px
-  rgba(255, 255, 255, 0.25),
-  inset 0px 3px 9px
-  rgba(255, 255, 255, 0.3),
-  inset 0px 1px 1px
-  rgba(255, 255, 255, 0.6),
-  inset 0px -8px 36px
-  rgba(0, 0, 0, 0.3),
-  inset 0px 1px 5px
-  rgba(255, 255, 255, 0.6),
-  2px 19px 31px
-  rgba(0, 0, 0, 0.2);
-  border-radius: 14px;
-  font-weight: bold;
-  font-size: 30px;
-
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-
-  cursor: none;
-}
-li {
-	color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-textarea {
-	color: white;
-}
-a {
-	color: white;
-    cursor: none;
-    text-decoration: none;
-}
-h2 {
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  }
-}
 </style>
+</head>
 
-<center>
-<h2>Exemplo de patches personalizados</h2>
-</center>
-<br></br>
+<body>
 
-<button type="button" class="collapsible">ADICIONAR ARQUIVO</button>
-<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)"
+
+<button type="button" class="collapsible"><b>PATCHES</b></button>
+<div class="content">
+</br>
+  <button type="button" class="cx">ADICIONAR ARQUIVO</button>
+<textarea class="cd" readonly onKeyPress="txtLog_OnKeyPress(event)"
 >
 
 
@@ -128,9 +111,9 @@ TARGET:
 </br>
 
 <center>
-<button type="button" class="collapsible">EXCLUIR ARQUIVO</button>
+<button type="button" class="cx">EXCLUIR ARQUIVO</button>
 
-<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+<textarea class="cd" readonly onKeyPress="txtLog_OnKeyPress(event)">
 
 
 
@@ -143,8 +126,8 @@ TARGET:
 <br>
 </br>
 
-<button type="button" class="collapsible">SUBSTITUIÇÃO INTERNA</button>
-<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+<button type="button" class="cx">SUBSTITUIÇÃO INTERNA</button>
+<textarea class="cd" readonly onKeyPress="txtLog_OnKeyPress(event)">
 
 [MATCH_REPLACE]
 TARGET:
@@ -161,8 +144,8 @@ accessFlags = 0x0
 </br>
 <br>
 
-<button type="button" class="collapsible">ALTERAR CORES</button>
-<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+<button type="button" class="cx">ALTERAR CORES</button>
+<textarea class="cd" readonly onKeyPress="txtLog_OnKeyPress(event)">
 
 [MATCH_REPLACE]
 TARGET:
@@ -180,23 +163,17 @@ REPLACE:
 <br>
 </br>
 </br>
-<br>
-</br>
-<br>
-</br>
 
-
-<i><li>Depois de copiar o código, gere um arquivo chamado "patch" de extensão ".txt"</li></i>
+    <i><li>Depois de copiar o código, gere um arquivo chamado "patch" de extensão ".txt"</li></i>
 <br></br>
 
-<i><li>Após criar o arquivo patch.txt, cole o código dentro do arquivo</li></i>
+<i><li>Após criar o arquivo patch.txt, cole o código dentro do arquivo patch.txt</li></i>
 <br></br>
 
 <i><li>Depois de colar o código, compacta o arquivo "patch.txt" em um arquivo .zip, somente depois disso você poderá executar o patch no apk editor pro</li></i>
 <br></br>
-
-<script Language="Javascript">
-var coll = document.getElementsByClassName("collapsible");
+</div><script Language="Javascript">
+var coll = document.getElementsByClassName("cx");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -216,8 +193,6 @@ function txtLog_OnKeyPress() {
     }
 }
 </script>
-<br>
-</br>
 
 </body>
 </html>
