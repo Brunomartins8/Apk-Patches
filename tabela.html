@@ -13,7 +13,6 @@ body {
   font-size: 25px;
 }
 .collapsible {
-  background-color: black;
   color: gold;
   cursor: pointer;
   padding: 18px;
@@ -35,7 +34,7 @@ body {
   overflow: hidden;
   background-color: #f1f1f1;
   height: none;
-  border: 1px solid;
+  border: 1px none;
   
 }
 .texto_verde {
@@ -75,7 +74,7 @@ td {
   color: black;
 }
 th, tr {
-  background-color: #28649C;
+  background-color: black;
   color: gold;
   font-family: serif;
   font-weight: none;
@@ -92,13 +91,11 @@ th, tr {
 }
 </style>
 </head>
-
 <body>
 
 
-<button type="button" class="collapsible"><b>TABELA</b></button>
+<button type="button" class="collapsible"><b></b></button>
 <div class="content">
-<br></br>
 
 <table>
     <th>TAGS</th>
@@ -109,7 +106,7 @@ th, tr {
     <td>Motor mínimo necessário da versão; o motor na versão 1.6.8 é a versão 2<br></br>
 Exemplo:<br></br>
 
-[MIN_ENGINE_VER]</br>
+<a translate="no">[MIN_ENGINE_VER]</a></br>
 1</td>
   </tr>
   <tr>
@@ -117,7 +114,7 @@ Exemplo:<br></br>
     <td>Mostrar autor do patch<br></br>
 Exemplo:<br></br>
 
-[AUTHOR]</br>
+<a translate="no">[AUTHOR]</a></br>
 Meu nome é</td>
   </tr>
   <tr>
@@ -125,7 +122,7 @@ Meu nome é</td>
     <td>Para qual nome de pacote<br></br>
 Exemplo:<br></br>
 
-[PACKAGE]</br>
+<a translate="no">[PACKAGE]</a></br>
 *</td>
   </tr>
   <tr>
@@ -133,24 +130,24 @@ Exemplo:<br></br>
     <td>Adicionar arquivo<br></br>
 Exemplo:<br></br>
 
-Neste exemplo, o arquivo index.html que está dentro do arquivo de extensão .zip será adicionado ao diretório raw-pt<br></br>
-[ADD_FILES]<br>
+Neste exemplo, o arquivo index.html que está dentro do arquivo de extensão <a translate="no">.zip</a> será adicionado ao diretório <a translate="no">raw-pt</a><br></br>
+<a translate="no">[ADD_FILES]<br>
 SOURCE:</br>
 &nbsp;&nbsp;&nbsp;index.html<br>
 TARGET:</br>
 &nbsp;&nbsp;&nbsp;res/raw-pt/index.html</br>
-[/ADD_FILES]</td>
+[/ADD_FILES]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[REMOVE_FILES]</td>
     <td>Remover arquivo<br></br>
     
     Exemplo:<br></br>
-Neste exemplo, todos os arquivos que estiverem dentro do diretório values-pt-rBR serão excluídos junto com ele<br></br>
-[REMOVE_FILES]<br>
+Neste exemplo, todos os arquivos que estiverem dentro do diretório <a translate="no">values-pt-rBR</a> serão excluídos junto com ele<br></br>
+<a translate="no">[REMOVE_FILES]<br>
 TARGET:</br>
 &nbsp;&nbsp;&nbsp;res/values-pt-rBR</br>
-[/REMOVE_FILES]</td>
+[/REMOVE_FILES]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[MERGE]</td>
@@ -168,7 +165,7 @@ SOURCE:</br>
     <td>Substitua o conteúdo correspondente dentro do arquivo de destino<br></br>
 Exemplo:<br></br>
 
-[MATCH_REPLACE]</br>
+<a translate="no">[MATCH_REPLACE]</br>
 TARGET:<br>
 &nbsp;&nbsp;&nbsp;smali/com/frojo/moy7/Game.smali</br>
 MATCH:</br>
@@ -181,7 +178,7 @@ REPLACE:</br>
 const v2, 0xf423f</br>
 DOTALL:<br>
 &nbsp;&nbsp;&nbsp;true</br>
-[/MATCH_REPLACE]
+[/MATCH_REPLACE]</a>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[MATCH_GOTO]</td>
@@ -189,8 +186,8 @@ DOTALL:<br>
 
 Exemplo:<br></br>
 
-Neste exemplo, essa regra está redirecionando para outra regra que decidirá se deve ou não modificar ou seja GOTO: modify_application redireciona se corresponder<br></br>
-[MATCH_GOTO]<br>
+Neste exemplo, essa regra está redirecionando para outra regra que decidirá se deve ou não modificar ou seja <a translate="no">GOTO: modify_application</a> redireciona se corresponder<br></br>
+<a translate="no">[MATCH_GOTO]<br>
 TARGET:</br>
 &nbsp;&nbsp;&nbsp;AndroidManifest.xml<br>
 MATCH:<br>
@@ -199,49 +196,68 @@ REGEX:<br>
 &nbsp;&nbsp;&nbsp;true</br>
 GOTO:<br>
 &nbsp;&nbsp;&nbsp;modify_application</br>
-[/MATCH_GOTO]<br></br>
+[/MATCH_GOTO]</a><br></br>
 
-E como esta regra corresponde ao "modify_application", ela fará uma substituição<br></br>
+E como esta regra corresponde ao <a translate="no">"modify_application"</a>, ela fará uma substituição<br></br>
 
-[MATCH_REPLACE]<br>
+<a translate="no">[MATCH_REPLACE]<br>
 NAME:</br>
-&nbsp;&nbsp;&nbsp;modify_application</td>
+&nbsp;&nbsp;&nbsp;modify_application</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[MATCH_ASSIGN]</td>
-    <td>Atribuição de correspondência, Obtenha o nome da texto e atribua-o a STR_NAME<br></br>
+    <td>Atribuição de correspondência, Obtenha o nome da texto e atribua-o a <a translate="no">STR_NAME</a><br></br>
 Exemplo:<br></br>
-ASSIGN:<br>
+<a translate="no">ASSIGN:<br>
 &nbsp;&nbsp;&nbsp;STR_NAME=${GROUP2}</br>
-[/MATCH_ASSIGN]<br>
+[/MATCH_ASSIGN]</a><br>
 <br></br>
 
 Nesta regra a atribuição do nome do texto é obtida<br><br>
-MATCH:<br>
+<a translate="no">MATCH:<br>
 &nbsp;&nbsp;&nbsp;&lt;string name="${STR_NAME}"&gt;</br>
 REGEX:</br>
 &nbsp;&nbsp;&nbsp;true<br>
 REPLACE:</br>
 &nbsp;&nbsp;&nbsp;&lt;string name="${STR_NAME}"&gt;2-</br>
-[/MATCH_REPLACE]
+[/MATCH_REPLACE]</a>
 </td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[FUNCTION_REPLACE]</td>
-    <td>Não há descrição ainda, mas o uso desta tag se consistente em substituir funções.<br></br>
+    <td>Esta tag não é suportada, mas o uso dela se consistente nisso.<br></br>
 
 Exemplo:<br></br>
-[FUNCTION_REPLACE]</br>
+<a translate="no">[FUNCTION_REPLACE]</br>
 TARGET:<br></br>
 FUNCTION:<br></br>
 REPLACE:<br></br>
-[/FUNCTION_REPLACE]
+[/FUNCTION_REPLACE]</a>
 </td>
   </tr>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[SIGNATURE_REVISE]</td>
-    <td>Revisão de assinatura, se houver vetores "%RSA_DATA%" e "%PACKAGE_NAME%" dentre aspas no arquivo de extensão smali serão substituídas pelo nome do pacote do aplicativos que você aplicou o patch ou serão substituídas pelos dados do recurso</td>
+    <td>Revisão de assinatura, se houver vetores <a translate="no">"%RSA_DATA%"</a> e <a translate="no">"%PACKAGE_NAME%"</a> dentre aspas no arquivo de extensão smali serão substituídas pelo nome do pacote do aplicativos que você aplicou o patch ou serão substituídos por dados de recurso<br></br>
+Exemplo:<br></br>
+
+#Substitua qualquer campo vazio para assinar o nome do pacote<br>
+<a translate="no">[MATCH_REPLACE]</br>
+TARGET:<br>
+smali/Test$1.smali</br>
+MATCH:<br>
+const/(.*) ([pv]\d+), ""</br>
+REGEX:<br>
+&nbsp;&nbsp;&nbsp;true</br>
+REPLACE:<br>
+const/${GROUP1} ${GROUP2}, "%PACKAGE_NAME%"</br>
+[/MATCH_REPLACE]</a><br></br>
+
+#Assinar nome do pacote do aplicativo<br>
+<a translate="no">[SIGNATURE_REVISE]</br>
+TARGET:<br>
+smali/Test$1.smali</br>
+[/SIGNATURE_REVISE]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[GOTO]</td>
@@ -249,33 +265,68 @@ REPLACE:<br></br>
     
     Exemplo: <br></br>
     
-  Neste exemplo, a regra "go to" vai redirecionar para outra regra que, caso corresponda, decidirá o que fazer<br></br>
+  Neste exemplo, a regra <a translate="no">"go to"</a> vai redirecionar para outra regra que, caso corresponda, decidirá o que fazer<br></br>
 
-[GOTO]<br>
+<a translate="no">[GOTO]<br>
 GOTO:</br>
 &nbsp;&nbsp;&nbsp;modify_activities</br>
-[/GOTO]</td>
+[/GOTO]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[DUMMY]</td>
-    <td>Regra fictícia. É mais como um rótulo que contém apenas o campo NAME. De “MATCH_GOTO” ou “GOTO” regra, poderíamos pular para uma regra fictícia.</td>
+    <td>Regra fictícia. É mais como um rótulo que contém apenas o campo <a translate="no">NAME</a>. De <a translate="no">“MATCH_GOTO”</a> ou <a translate="no">“GOTO”</a> regra, poderíamos pular para uma regra fictícia.</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[EXECUTE_DEX]</td>
-    <td>Execute um script dex<br></br>
+    <td>Executar um script.dex<br></br>
+    Exemplo:<br></br>
+    
+    <a translate="no">[EXECUTE_DEX]<br>
+SCRIPT:</br>
+&nbsp;&nbsp;&nbsp;script.dex<br>
+SMALI_NEEDED:</br>
+&nbsp;&nbsp;&nbsp;true<br>
+MAIN_CLASS:<br>
+&nbsp;&nbsp;&nbsp;test.AddDebugInfo</br>
+ENTRANCE:<br>
+&nbsp;&nbsp;&nbsp;addDebugInfo<br>
+PARAM:</br>
+&nbsp;&nbsp;&nbsp;smali</br>
+[/EXECUTE_DEX]</a>
 </td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[APPLICATION]</td>
-    <td>Para alvo de componente, localizar a primeira atividade do aplicativo</td>
+    <td>Para alvo de componente, localizar a primeira atividade do aplicativo<br></br>
+Exemplo:<br></br>
+
+Localizar a atividade inicial do aplicativo
+<a translate="no">[MATCH_REPLACE]<br>
+NAME:</br>
+&nbsp;&nbsp;&nbsp;modify_activities<br>
+TARGET:</br>
+&nbsp;&nbsp;&nbsp;[LAUNCHER_ACTIVITIES]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[ACTIVITIES]</td>
-    <td>Para alvo de componente, localizar a primeira atividade do aplicativo</td>
+    <td>Para alvo de componente, localizar qualquer atividade do aplicativo<br></br>
+Exemplo:<br></br>
+
+Essa regra vai obter qualquer resultado do arquivo de extensão .smali<br>
+<a translate="no">[MATCH_REPLACE]<br>
+NAME:</br>
+&nbsp;&nbsp;&nbsp;modify_activities<br>
+TARGET:</br>
+&nbsp;&nbsp;&nbsp;[ACTIVITIES]</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">[LAUNCHER_ACTIVITIES]</td>
-    <td>Para alvo de componente, localizar a primeira atividade do aplicativo</td>
+    <td>Para alvo de componente, localizar a primeira atividade do aplicativo<br></br>
+Exemplo:<br></br>
+
+<a translate="no">[MATCH_GOTO]<br>
+TARGET:</br>
+&nbsp;&nbsp;&nbsp;[LAUNCHER_ACTIVITIES]</a></td>
   </tr>
 </table>
 <br></br>
@@ -288,62 +339,62 @@ GOTO:</br>
     <td class="Sintaxe" translate="no">NAME:</td>
     <td>Especifica o nome da regra<br></br>
 Exemplo:<br></br>
-NAME:<br>
+<a translate="no">NAME:<br>
 &nbsp;&nbsp;&nbsp;add_ttf<br></br>
 NAME:<br>
-&nbsp;&nbsp;&nbsp;Pacifico.ttf</td>
+&nbsp;&nbsp;&nbsp;Pacifico.ttf</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">SOURCE:</td>
     <td>Extrair um arquivo smali dentro do arquivo zip para o aplicativo<br></br>
 Exemplo:<br></br>
 
-SOURCE:</br>
+<a translate="no">SOURCE:</br>
 &nbsp;&nbsp;&nbsp;index.html<br></br>
 
 SOURCE:</br>
-&nbsp;&nbsp;&nbsp;MaiActivity.smali</td>
+&nbsp;&nbsp;&nbsp;MaiActivity.smali</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">TARGET:</td>
     <td>Indica o trageto do arquivo<br></br>
     Exemplo:<br></br>
 
-TARGET:</br>
+<a translate="no">TARGET:</br>
 &nbsp;&nbsp;&nbsp;assets/index.html<br></br>
 
 TARGET:</br>
-&nbsp;&nbsp;&nbsp;res/raw-pt/index.html</td>
+&nbsp;&nbsp;&nbsp;res/raw-pt/index.html</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">REPLACE:</td>
     <td>Substituição de componentes<br></br>
 Exemplo:<br></br>
-REPLACE:<br>
-const v2, 0xf423f </td>
+<a translate="no">REPLACE:<br>
+const v2, 0xf423f </a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">GOTO:</td>
     <td>Especifica o nome da próxima regra. Se houver correspondência, então irá para execute essa regra, ou seja se<br></br>
 Exemplo:<br></br>
-GOTO:<br>
-&nbsp;&nbsp;&nbsp;modify_res<br></br>
+<a translate="no">GOTO:<br>
+&nbsp;&nbsp;&nbsp;modify_res</a><br></br>
 
-#Goto redireciona para essa regra correspondente
-[MATCH_REPLACE]<br>
+#Goto redireciona para essa regra correspondente</br>
+<a translate="no">[MATCH_REPLACE]<br>
 NAME:</br>
-&nbsp;&nbsp;&nbsp;modify_res</td>
+&nbsp;&nbsp;&nbsp;modify_res</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">SCRIPT:</td>
     <td>É um arquivo de script de destino dentro do zip a ser executado. Deve ser um dex arquivo, que pode ser gerado seguindo comandos:<br></br>
 
-javac -source 1.7 -target 1.7 test/AddDebugInfo.java<br></br>
+javac -source 1.7 -target 1.7 <a translate="no">test/AddDebugInfo.java</a><br></br>
 
-dx --dex --output=script.dex test/AddDebugInfo.class<br></br>
+dx --dex --output=<a translate="no">script.dex test/AddDebugInfo.class</a><br></br>
 Exemplo:<br></br>
-SCRIPT:</br>
-&nbsp;&nbsp;&nbsp;script.dex</td>
+<a translate="no">SCRIPT:</br>
+&nbsp;&nbsp;&nbsp;script.dex</a></td>
 <br></br>
 </tr>
   <tr>
@@ -352,15 +403,19 @@ SCRIPT:</br>
 
 Exemplo:<br></br>
 
-Neste exemplo a expressão é regular, declare como "true" se precisa de um código pequeno ou declare como "false" se não precisa de um código pequeno<br></br>
-SMALI_NEEDED:</br>
+Neste exemplo a expressão é regular, declare como <a translate="no">"true"</a> se precisa de um código pequeno ou declare como <a translate="no">"false"</a> se não precisa de um código pequeno<br></br>
+<a translate="no">SMALI_NEEDED:</br>
 &nbsp;&nbsp;&nbsp;true<br></br>
 SMALI_NEEDED:</br>
-&nbsp;&nbsp;&nbsp;false</td>
+&nbsp;&nbsp;&nbsp;false</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">MAIN_CLASS:</td>
-    <td>Caminho da classe que contém a entrada</td>
+    <td>Caminho da classe que contém a entrada<br></br>
+Exemplo:<br></br>
+
+<a translate="no">MAIN_CLASS:</br>
+&nbsp;&nbsp;&nbsp;test.AddDebugInfo</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">EXTRACT:</td>
@@ -371,14 +426,14 @@ SMALI_NEEDED:</br>
     <td>Indica se o sinalizador é ou não usado com a expressão regular.<br></br>
 
 Exemplo:<br></br>
-DOTALL:<br>
+<a translate="no">DOTALL:<br>
 &nbsp;&nbsp;&nbsp;true<br></br>
 DOTALL:<br>
-&nbsp;&nbsp;&nbsp;false</td>
+&nbsp;&nbsp;&nbsp;false</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">ASSIGN:</td>
-    <td>Especifica o nome e o valor da variável. (Por exemplo: p1 = $ {GROUP1}) E se há mais de uma variável, então cada variável seguinte deve começar com um nova linha.</td>
+    <td>Especifica o nome e o valor da variável. (Por exemplo: <a translate="no">p1 = $ {GROUP1})</a> E se há mais de uma variável, então cada variável seguinte deve começar com um nova linha.</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">REGEX:</td>
@@ -386,16 +441,16 @@ DOTALL:<br>
 
 Exemplo:<br></br>
 
-Declare como true se quiser que vá para a próxima regra ou declare-o como false se não quiser que vá para a próxima regra<br></br>
+Declare como true se quiser que vá para a próxima regra ou declare-o como <a translate="no">false</a> se não quiser que vá para a próxima regra<br></br>
 
-REGEX:</br>
+<a translate="no">REGEX:</br>
 &nbsp;&nbsp;&nbsp;true<br></br>
 REGEX:</br>
-&nbsp;&nbsp;&nbsp;false</td>
+&nbsp;&nbsp;&nbsp;false</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">FUNCTION:</td>
-    <td>Não há descrição ainda</td>
+    <td>Não é suportado</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">INTERFACE_VERSION:</td>
@@ -405,24 +460,24 @@ REGEX:</br>
     <td class="Sintaxe" translate="no">PARAM:</td>
     <td>Passe como o último parâmetro para o método de destino<br></br>
 Exemplo:<br></br>
-PARAM:<br>
-&nbsp;&nbsp;&nbsp;smali<br></br>
+<a translate="no">PARAM:<br>
+&nbsp;&nbsp;&nbsp;smali</a><br></br>
 O parâmetro indica a extensão do arquivo</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">ENTRANCE:</td>
-    <td>Método de destino para executar, o método deve aceitar 4 parâmetros de String<br></br>
+    <td>Método de destino para executar, o método deve aceitar 4 parâmetros de texto<br></br>
 Exemplo:<br></br>
-ENTRANCE:<br>
-&nbsp;&nbsp;&nbsp;MaiActivity</td>
+<a translate="no">ENTRANCE:<br>
+&nbsp;&nbsp;&nbsp;MaiActivity</a></td>
   </tr>
 </table>
 <br></br>
 <br></br>
 
 <table>
-    <th>VETORES</th>
-    <th>DESCRIÇÃO  DOS VETORES</th>
+    <th>CARACTERES</th>
+    <th>DESCRIÇÃO  DOS CARACTERES</th>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">*</td>
@@ -430,43 +485,43 @@ ENTRANCE:<br>
 
 Exemplo:<br></br>
 
-TARGET:<br>
-*.smali<br></br>
-declarando desta forma, vai obter qualquer nome do arquivo de extensão .smali<br></br>
+<a translate="no">TARGET:<br>
+*.smali</a><br></br>
+declarando desta forma, vai obter qualquer nome do arquivo de extensão <a translate="no">.smali</a><br></br>
 
 Outro exemplo:<br></br>
-TARGET:<br>
-MainActivity*.smali<br></br>
-Assim podemos obter todas as classes relacionadas a essa "MainActivity.smali" MainActivity$1.smali MainActivity$2.smali etc...
+<a translate="no">TARGET:<br>
+MainActivity*.smali</a><br></br>
+Assim podemos obter todas as classes relacionadas a essa <a translate="no">"MainActivity.smali" MainActivity$1.smali MainActivity$2.smali</a> etc...
 </td>
   <tr>
-    <td class="Sintaxe" translate="no">(.+)</td>
+    <td class="Sintaxe" translate="no">.+</td>
     <td>Representa qualquer nome do texto original<br></br>
 Exemplo:<br></br>
-.method (.+)</br>
-<a style="color:#C74A17">.method</a> public</td>
+<a translate="no">.method (.+)</br>
+<a style="color:#C74A17" translate="no">.method</a> <a translate="no">public</a></td>
   </tr>
   <tr>
-    <td class="Sintaxe" translate="no">(\d+)</td>
+    <td class="Sintaxe" translate="no">\d+</td>
     <td>Representa números<br></br>
-Exemplo:<br></br>
-.registers (\d+)<br>
-<a style="color:#C74A17">.registers</a> <a style="color:#816E0F">3</a> </br></br>ou <a style="color:#816E0F">0</a>x</td>
+Exemplos:<br></br>
+<a translate="no">.registers (\d+)<br>
+<a style="color:#C74A17">.registers</a> <a style="color:#816E0F">3</a> </br></br>const/4 v1, <a style="color:#816E0F">0</a>x1</br>const/4 v1, (\d+)</a></td>
   </tr>
   <tr>
-    <td class="Sintaxe" translate="no">([pv]\d+)</td>
-    <td>Representa registros e valores hex <a style="color:#816E0F">0</a>x<br></br>
+    <td class="Sintaxe" translate="no">[pv]\</td>
+    <td>Representa registros<a style="color:#816E0F">0</a>x<br></br>
 
 Exemplo:<br></br>
-([pv]\) representa um registro como por exemplo p0, (\d+) representa "0"</td>
+<a translate="no">([pv]\)</a> representa um registro como por exemplo<a translate="no"> p0, v0, v1, </a>etc...</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">\</td>
     <td>Representa uma separação entre objetos<br></br>
 
 Exemplo:<br></br>
-\<a style="color:#C74A17">.method</a></br>
-\.registers <br></br>Isso significa que o método não está na mesma linha do registro</td>
+<a translate="no">\<a style="color:#C74A17">.method</a></br>
+\.registers </a><br></br>Isso significa que o método não está na mesma linha do registro</td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">#</td>
@@ -476,20 +531,19 @@ Exemplo:<br></br>
 
 Neste exemplo, a linha de comentário fica acima da tag para descrever o que essa regra faz<br></br>
 #Substituir<br>
-[MATCH_REPLACE]
+<a translate="no">[MATCH_REPLACE]</a>
 </td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">\n</td>
-    <td>Em alguns casos pode excluir linhas<br></br>
+    <td>Representada por um caractere de uma nova linha, alguns casos podem excluir linhas<br></br>
 
 Exemplo:<br></br>
-MATCH:<br>
-<a style="color: #859900">return-void</a>\n</br>
-<a style="color: #C74A17">.end</a> method
+<a translate="no">MATCH:</a><br>
+<a style="color: #859900" translate="no">return-void</a>\n</br>
+<a style="color: #C74A17" translate="no">.end</a><a translate="no">&nbsp;method</a>
 <br></br> se você adicionar vai excluir uma linha e o resultado vai ser esse<br></br>
-<a style="color: #859900">return-void</a><a style="color: #C74A17">.end</a> method
-</td>
+<a style="color: #859900" translate="no">return-void</a><a style="color: #C74A17" translate="no">.end</a> <a translate="no">&nbsp;method</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">${GROUP1}<br> ${GROUP2}</br>
@@ -498,34 +552,41 @@ MATCH:<br>
 
 Por exemplo:<br></br>
 <a style="color: #C74A17">
-.method</a> public</br>
+<a translate="no">.method </a> public</br>
 <a style="color: #C74A17">.method</a> ${GROUP1}<br></br>
 line <a style="color: #997B08">10</a> <br>
 line ${GROUP2}<br></br>
 
 <a style="color: #859900">invoke-static</a> {v4},<br>
 <a style="color: #859900">invoke-static</a> {${GROUP2}},
-</td>
+</a></td>
   </tr>
+</table>
+<br></br>
+
+<table>
+    <th>COMANDOS</th>
+    <th>DESCRIÇÃO  DOS COMANDOS</th>
+  </tr>
+  <tr>
   <tr>
     <td class="Sintaxe" translate="no">true</td>
     <td>Se você deseja autorizar declare abaixo<br></br>
 
 Exemplo:<br></br>
-REGEX:</br>
-&nbsp;&nbsp;&nbsp;true</td>
+<a translate="no">REGEX:</br>
+&nbsp;&nbsp;&nbsp;true</a></td>
   </tr>
   <tr>
     <td class="Sintaxe" translate="no">false</td>
     <td>Se você não deseja autorizar declare abaixo<br></br>
 
 Exemplo:<br></br>
-REGEX:</br>
-&nbsp;&nbsp;&nbsp;false</td>
+<a translate="no">REGEX:</br>
+&nbsp;&nbsp;&nbsp;false</a></td>
   </tr>
 </table>
 <br></br>
-
 </div>
 
 </body>
